@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  poll-service-mongodb:
+    container_name: poll-service-mongodb
+    image: mongo:4.2-bionic
+    restart: always
+    ports:
+      - 27017:27017
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: root
