@@ -21,7 +21,7 @@ public class PollController {
   public List<Poll> getPolls(
       @RequestParam(name = "initiator_email", required = false) String initiatorEmail,
       @RequestParam(name = "title", required = false) String title,
-      @RequestParam(name = "created_after", required = false) Long createdAfter) {
-    return pollService.getPolls(initiatorEmail, title, createdAfter);
+      @RequestParam(name = "created_from", required = false) Long createdFrom) {
+    return pollService.getPolls(initiatorEmail, title, createdFrom);
   }
 }
