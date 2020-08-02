@@ -1,6 +1,6 @@
 package com.marqusm.pollservice.controller;
 
-import com.marqusm.pollservice.model.dto.Poll;
+import com.marqusm.pollservice.model.Poll;
 import com.marqusm.pollservice.service.PollService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

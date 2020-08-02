@@ -1,17 +1,18 @@
-package com.marqusm.pollservice.model.dto;
+package com.marqusm.pollservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @AllArgsConstructor(staticName = "of")
 @NoArgsConstructor
 @Builder
 @Data
-public class PollLocation {
+public class PollParticipant {
+  private Long id;
   private String name;
-  private String address;
-  private String countryCode;
-  private String locationId;
+  private List<Integer> preferences;
 }

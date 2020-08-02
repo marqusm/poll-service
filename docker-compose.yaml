@@ -4,9 +4,17 @@ services:
   poll-service-mongodb:
     container_name: poll-service-mongodb
     image: mongo:4.2-bionic
-    restart: always
+    restart: unless-stopped
     ports:
       - 27017:27017
-#    environment:
-#      MONGO_INITDB_ROOT_USERNAME: root
-#      MONGO_INITDB_ROOT_PASSWORD: root
+
+  poll-service:
+    container_name: poll-service
+    image: poll-service:latest
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    environment:
+      - SPRING_DATA_MONGODB_HOST=poll-service-mongodb
+    depends_on:
+      - poll-service-mongodb

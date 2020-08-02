@@ -1,4 +1,4 @@
-package com.marqusm.pollservice.model.dto;
+package com.marqusm.pollservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

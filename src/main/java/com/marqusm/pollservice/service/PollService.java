@@ -1,6 +1,6 @@
 package com.marqusm.pollservice.service;
 
-import com.marqusm.pollservice.model.dto.Poll;
+import com.marqusm.pollservice.model.Poll;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
