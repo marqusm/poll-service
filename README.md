@@ -23,3 +23,20 @@ It can happen the response is very large.
 - Validation can be performed using some framework or with custom dedicated functions, for better readability and usability.
 - Nice to have: Introduce 422 status for understandable but not processable requests.
 - Database should have user/pass
+
+
+## About implementation
+Spring Boot is chosen because of simplicity and speed of implementation.
+Since this framework includes all necessary thing to start a service, it's a very good tool for fast development.
+
+Mongo is a database engine.
+That's because there is no relation in the data.
+Also, data is only somewhat structured. Many sub-objects have different forms.
+Also, I am expecting that this data exists in very large numbers. Mongo has native sharding.
+All these facts, makes Mongo a very good choice.
+
+The following steps would be:
+- Security. We need to define roles and permissions for users.
+We need API security as well (JWT and CSRF tokens for eg.).
+- Requests caching to achieve better performance.
+- Avoid manual build process. Do everything using Docker Compose.
